@@ -2,13 +2,13 @@
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
-	<title>Skkrypto Homepage</title>
+	<title>IT Host - Hosting Template</title>
 	<meta charset="UTF-8">
 	<meta name="description" content="Cloud 83 - hosting template ">
 	<meta name="keywords" content="cloud, hosting, creative, html">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- Favicon -->
-	<link href="img/g.png">
+	<link href="img/favicon.ico" rel="shortcut icon"/>
 
 	<!-- Google Font -->
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -19,7 +19,6 @@
 	<link rel="stylesheet" href="css/font-awesome.min.css"/>
 	<link rel="stylesheet" href="css/flaticon.css"/>
 	<link rel="stylesheet" href="css/owl.carousel.min.css"/>
-	<link rel="stylesheet" href="css/animate.css"/>
 	<link rel="stylesheet" href="css/style.css"/>
 
 
@@ -37,7 +36,7 @@
 
 	<!-- Header section -->
 	<header class="header-section">
-		<a href="./index.html" class="site-logo"><img src="./img/skkrypto.png" alt=""></a>
+		<a href="./index.html" class="site-logo"><img src="./img/logo.png" alt=""></a>
 		<div class="nav-switch">
 			<i class="fa fa-bars"></i>
 		</div>
@@ -58,188 +57,76 @@
 	<!-- Header section end -->
 
 
-	<!-- Hero section -->
-	<section class="hero-section set-bg" data-setbg="img/bg.jpg">
-		<div class="container h-100">
-			<div class="hero-content text-white">
-				<div class="row">
-					<div class="col-lg-6 pr-0">
-						<h2>성균관대학교 블록체인 네트워크</h2>
-						<h3>Skkrypto</h3>
-						<p> 블록체인의 대중화를 꿈꾸며 다양한관점의 융합적인 접근을 통해 블록체인의 진입장벽을 낮추고,인사이트를 키우고자 다양한 학과생들이 연구하고 있는 네트워크입니다.</p>
-						<a href="./img/skkrypto b.pdf" target="_blank" class="site-btn">학회 브로슈어 다운로드</a>
-					</div>
-				</div>
-				<div class="hero-rocket">
-					<img src="./img/rocket.png" alt="">
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- Hero section end -->
-
-
-	<!-- Features section -->
-	<section class="features-section spad">
+	<!-- Page Top section -->
+	<section class="page-top-section set-bg" data-setbg="img/page-top-bg.jpg">
 		<div class="container">
-			<div class="section-title">
-				<img src="./img/g.png" style= max-width:10% alt="#">
-				<h2>What to study</h2>
-			</div>
-			<div class="row">
-				<div class="col-lg-4 col-md-6 feature-item">
-					<div class="ft-icon">
-						<i class="flaticon-domain-registration"></i>
-					</div>
-					<h4>블록체인 백서 스터디</h4>
-					<p>Bitcoin, Ethereum, Eos등 해외 블록체인 플랫폼들과 Kalytn, Luniverse, LINK, Icon 등 국내 블록체인 플랫폼들의   백서를 분석합니다.</p>
-				</div>
-				<div class="col-lg-4 col-md-6 feature-item fi-center-top">
-					<div class="ft-icon">
-						<i class="flaticon-server"></i>
-					</div>
-					<h4>기획&개발 협업 프로젝트</h4>
-					<p>소프트웨어 대학의 지원을 받아 진행한 교내 블록체인 기반 투표 시스템, 성균 투표 프로젝트나 산학협력 등을 통해 기획팀과 개발팀이 협업을 해서 하나의 프로젝트를 완성시키고 상용화를 준비합니다. </p>
-				</div>
-				<div class="col-lg-4 col-md-6 feature-item">
-					<div class="ft-icon">
-						<i class="flaticon-devices"></i>
-					</div>
-					<h4>블록체인 서비스 기획</h4>
-					<p>서비스 기획 교육을 진행하고, 직접 기획서부터 UI/UX Design, Service Architecture 등의 설계까지 자체 프로젝트를 진행함으로써 기획력 향상을 도모합니다. </p>
-				</div>
-				<div class="col-lg-4 col-md-6 feature-item">
-					<div class="ft-icon">
-						<i class="flaticon-smartphone"></i>
-					</div>
-					<h4>블록체인 동향 연구</h4>
-					<p>블록체인 산업의 트렌드를 리서치하고, 아티클을 분석해 비평글을 작성합니다. 또한 DEFI, DID, Custody 산업 등 블록체인 분야에서 핫한 주제들을 중심적으로 연구합니다. </p>
-				</div>
-				<div class="col-lg-4 col-md-6 feature-item">
-					<div class="ft-icon">
-						<i class="flaticon-folder"></i>
-					</div>
-					<h4>블록체인 서비스 개발</h4>
-					<p>Solidity 기초교육 부터 토큰 발행, geth/parity node 실습 등을 통해 블록체인 개발 지식을 쌓고 직접 자체 프로젝트로 서비스를 개발함으로써 개발 실력 향상을 도모합니다. </p>
-				</div>
-				<div class="col-lg-4 col-md-6 feature-item">
-					<div class="ft-icon">
-						<i class="flaticon-viral-marketing"></i>
-					</div>
-					<h4>UI/UX Design</h4>
-					<p>기존 블록체인 산업이 겪던 난제인 확장성 문제를 해결하는 데에 UX 향상이 중요하다고 생각하기 때문에 학회 차원에서 공통적으로 교육 및 실습을 진행합니다. 이를 통해 학회원들은 UX에 관해 심층적으로 성찰해 볼 수 있습니다. </p>
-				</div>
+			<h2>Contact</h2>
+			<div class="site-breadcrumb">
+				<a href="home">Home</a> / <span>Contact</span>
 			</div>
 		</div>
 	</section>
-	<!-- Features section end -->
+	<!-- Page Top section end -->
 
 
-
-	<!-- Domain search section -->
-	<section class="domain-search-section spad set-bg" data-setbg="img/domain-bg.jpg">
-		<div class="container">
-			<div class="section-title st-white">
-				<h22>Recruiting</h22>
-				<p>블록체인을 함께 공부하고 학회를 이끌어갈 학부생,대학원생</p>
-				<p>블록체인을 활용해 서비스, 사업을 기획하고 개발하고 싶으신분</p>
-				<p>해커톤, 공모전 등 다양한 프로젝트 경험을 하고 싶으신 분</p>
-				<p>두 학기 연속으로 참여하고, 스터디와 세션을 참여하실 수 있는 분</p>
-				<h20>함께 혁신을 만들고 싶은 Next Skkrypto인은 지원해주세요!</h20>
-			</div>
-			<div class="domain-form-warp">
-				<form class="domain-search-form">
-					<a href="./img/poster.zip" target="_blank" class="site-btn"> 안내 포스터 다운로드</a> <a href="./img/application form.zip" target="_blank" class="site-btn"> 학회 지원서 다운로드</a>
-				</form>
-			</div>
-		</div>
-	</section>
-	<!-- Domain search section end -->
-
-
-	<!-- Skills & testimonials section -->
-	<section class="skills-and-testimonials-section spad"> <h21>After Skkrypto</h21>
+	<!-- Contact section -->
+	<section class="contact-section">
 		<div class="container">
 			<div class="row">
-				<!-- Skills -->
-				<div class="col-lg-6">
-					<div class="single-progress-item">
-						<p>블록체인의 기술적 원리 이해</p>
-						<div class="progress-bar-style" data-progress="100"  data-bgcolor="#eb2b63"></div>
+				<div class="col-lg-3 contact-text">
+					<h4>Contact Info</h4>
+					<p>성균관대학교 블록체인 네트워크 Skkrypto에게 산학협력 등 협업 프로젝트를 제안하고 싶거나 문의사항이 있으시다면 질문해주세요.</p>
+					<div class="cont-info">
+						<div class="ci-icon">
+							<img src="img/icons/2.png" alt="">
+						</div>
+						<span>3.5기 대외회장 정채원 연락처</span>
+						<span>+82-10-3967-7028</span>
 					</div>
-					<div class="single-progress-item">
-						<p>블록체인 산업 동향 파악</p>
-						<div class="progress-bar-style" data-progress="100"  data-bgcolor="#eb2bae"></div>
-					</div>
-					<div class="single-progress-item">
-						<p>UI/UX Design 실력</p>
-						<div class="progress-bar-style" data-progress="100"  data-bgcolor="#d22beb"></div>
-					</div>
-					<div class="single-progress-item">
-						<p>Smart Contract 등 개발 실력</p>
-						<div class="progress-bar-style" data-progress="100"  data-bgcolor="#972beb"></div>
-					</div>
-					<div class="single-progress-item">
-						<p>똑똑하고, 열정많은 사람들과의 네트워킹</p>
-						<div class="progress-bar-style" data-progress="100"  data-bgcolor="#732beb"></div>
+					<div class="cont-info">
+						<div class="ci-icon">
+							<img src="img/icons/2.png" alt="">
+						</div>
+						<span>skkrypto.io@gmail.com</span>
 					</div>
 				</div>
-				<!-- Testimonials -->
-				<div class="col-lg-6">
-					<div class="testimonials-slider owl-carousel">
-						<div class="testimonial-item">
-							<div class="ti-content">
-								<p>스크립토를 통해 블록체인의 가치에 대해 배울 수 있었고, IT 서비스 기획자로의 역량을 많이 기를 수 있었습니다. 구체적으로 다양한 프로젝트를 진행하며, 기획, UI/UX Design, Publishing 등의 직무적 역량을 쌓을 수 있었습니다. 또한, 열정 많고 똑똑한 사람들과의 네트워킹을 통해 삶의 제반이 되는 끈기를 기를 수 있었습니다. 제 대학생활에 있어서 최고의 선택은 Skkrypto에 입회한 것이라고 자신있게 말할 수 있습니다! </p>
+				<div class="col-lg-9">
+					<form class="contact-form">
+						<div class="row">
+							<div class="col-md-6">
+								<input type="text" placeholder="Your name">
 							</div>
-							<div class="ti-author-pic set-bg" data-setbg="img/io.PNG"></div>
-							<div class="ti-author">
-								<h6>정채원</h6>
-								<span>3.5기 대외 회장</span>
+							<div class="col-md-6">
+								<input type="text" placeholder="Your e-mail">
 							</div>
-						</div>
-						<div class="testimonial-item">
-							<div class="ti-content">
-								<p>스크립토 활동을 통해 이더리움, 하이퍼레져 등의 전반적인 블록체인 지식과 개발능력을 기를 수 있었습니다. 또한, 개발팀과 기획팀의 교류속에서 기획 파트가 일을 어떻게 진행하는 지를 배울 수 있는, 의미 있는 경험도 할 수 있어 제 삶에 큰 도움이 되었다고 생각합니다.</p>
-							</div>
-							<div class="ti-author-pic set-bg" data-setbg="img/dmdmjpg.jpg"></div>
-							<div class="ti-author">
-								<h6>박동민</h6>
-								<span>3기 회계팀장</span>
+							<div class="col-md-12">
+								<input type="text" placeholder="Subject">
+								<textarea placeholder="Message"></textarea>
+								<button class="site-btn">Send</button>
 							</div>
 						</div>
-						<div class="testimonial-item">
-							<div class="ti-content">
-								<p>사전 지식 없이 무작정 지원했지만 매주 진행하는 통합 세션과 개발팀 스터디, 그리고 기획팀과 함께 진행한 프로젝트를 통해, 블록체인에 대한 전반적인 이해와 개발 경험을 쌓을 수 있었습니다. 또한, 학회원 서로 의견을 주고받는 문화가 잘 자리잡혀 있어, 몰랐던 것도 많이 얻어갈 수 있었습니다. 아낌없이 주는 스크립토 네트워크에 무한한 감사를 드립니다.</p>
-							</div>
-							<div class="ti-author-pic set-bg" data-setbg="img/sh.jpg"></div>
-							<div class="ti-author">
-								<h6>박승호</h6>
-								<span>4기</span>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</>
-	</section>
-	<!-- Skills & testimonials section end -->
-
-
-	<!-- Banner section -->
-	<section class="banner-section set-bg" data-setbg="img/banner-bg.jpg">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-9 banner-text text-white">
-					<h3>Study blockchain and make innovation with Skkrypto</h3>
-				</div>
-				<div class="col-lg-3 text-left text-lg-right">
-					<a href="" class="site-btn">Get Started</a>
+					</form>
 				</div>
 			</div>
 		</div>
 	</section>
-	<!-- Banner section end -->
+	<!-- Contact section end -->
 
+<!--실험중-->
+  <div class="row" id="contact_us_form">
+     <h23>contact</h23>
+     <h4 style="margin-bottom:30px">Please call <a href="tel:+82-10-3967-7028" id="telephone">+82-10-3967-7028</a>, email <a href="mailto:skkrypto.io@gmail.com?Subject=Website%20Enquiry" target="_top" id="email">skkrypto.io@gmail.com</a> or fill out the contact form below.</h4>
+     <div class="col-sm-5 form-group">
+       <input class="form-control" id="name" name="fname" placeholder="First Name" type="text" required>
+       <input class="form-control" id="name" name="lname" placeholder="Last Name" type="text" required>
+       <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+     </div>
+     <div class="col-sm-7 form-group">
+       <textarea class="form-control" id="comments" name="comments" placeholder="Message" rows="5"></textarea>
+     </div>
+     <div class="col-sm-12 form-group"><button class="btn btn-default pull-right" type="submit">Send</button></div>
+</div>
+<!--실험 중-->
 
 	<!-- Footer top section -->
 	<section class="footer-top-section text-white spad">
@@ -279,12 +166,17 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	<!-- Footer top section end -->
 
 
+
 	<!--====== Javascripts & Jquery ======-->
 	<script src="js/jquery-3.2.1.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/owl.carousel.min.js"></script>
 	<script src="js/circle-progress.min.js"></script>
 	<script src="js/main.js"></script>
+
+	<!-- load for map -->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0YyDTa0qqOjIerob2VTIwo_XVMhrruxo"></script>
+	<script src="js/map.js"></script>
 
 	</body>
 </html>
