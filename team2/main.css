@@ -18,6 +18,20 @@ body,html{
     padding:30px;
     border-left: 1px solid; 
 }
+.head{
+    display:grid;
+    grid-template-columns: 30% 20% 20% 30%;
+}
 .graph{
-    
+    display:grid;
+    grid-template-columns: 60% 40%;
+}
+.input{
+    display:grid;
+    grid-template-rows: 15% 15% 15% 15% 40%;
+}
+.table{
+    display:grid;
+    grid-template-columns: 15% 15% 15% 15% 40%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
 }
