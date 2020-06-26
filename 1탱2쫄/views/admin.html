@@ -1,0 +1,79 @@
+<html>
+  <head>
+    <title>SKKRYPTO Admin Page</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  </head>
+  <body>
+    <h1><strong>SKKRYPTO Admin Page</strong></h1>
+    <p1>개발자 도구의 Console 창을 이용하세요.<br><br><br><br></p1>
+      <div class="register">
+        <p2>학회원 등록<br></p2>
+        <select class="choices" id="register_season">
+          <option value="" selected>기수 선택</option>
+          <option value="1">1기</option>
+          <option value="1.5">1.5기</option>
+          <option value="2">2기</option>
+          <option value="2.5">2.5기</option>
+          <option value="3">3기</option>
+          <option value="3.5">3.5기</option>
+          <option value="4">4기</option>
+          <option value="4.5">4.5기</option>
+          <option value="5">5기</option>
+          <option value="5.5">5.5기</option>
+        </select>
+        <input class="choices" id="register_id" type="text" placeholder="Student ID" />
+        <input class="choices" id="register_name" type="text" placeholder="Name in English" />
+        <input class="choices" id="register_startDate" type="date" />
+        <button class="btn_register" type="button" id='upload'>register</button>
+      </div><br>
+
+      <div class="graduate">
+        <p2>학회원 졸업<br></p2>
+        <input class="choices" id="graduate_id" type="text" placeholder="Student ID" />
+        <input class="choices" id="graduate_endDate" type="date" />
+        <button class="btn_graduate" type="button" id='upload'>graduate</button>
+      </div><br>
+
+      <div class="issue">
+        <p2>학회원 증명서 발급<br></p2>
+        <input class="choices" id="issue_id" type="text" placeholder="Student ID" />
+        <button class="btn_issue" type="button" id='upload'>issue</button>
+      </div><br>
+      
+      <div class="showIssue">
+        <p2>학회원 증명서 조회<br></p2>
+        <input class="choices" id="showIssue_id" type="text" placeholder="Student ID" />
+        <button class="btn_showIssue" type="button" id='upload'>showInfo</button>
+      </div><br>
+
+      <div class="update">
+        <p2>학회원 정보 변경<br></p2>
+        <select class="choices" id="update_season">
+          <option value="" selected>기수 선택</option>
+          <option value="1">1기</option>
+          <option value="1.5">1.5기</option>
+          <option value="2">2기</option>
+          <option value="2.5">2.5기</option>
+          <option value="3">3기</option>
+          <option value="3.5">3.5기</option>
+          <option value="4">4기</option>
+          <option value="4.5">4.5기</option>
+          <option value="5">5기</option>
+          <option value="5.5">5.5기</option>
+        </select>
+        <input class="choices" id="update_id" type="text" placeholder="Student ID" />
+        <input class="choices" id="update_name" type="text" placeholder="Name in English" />
+        <input class="choices" id="update_startDate" type="date" />
+        <input class="choices" id="update_endDate" type="date" />
+        <button class="btn_update" type="button" id='upload'>update</button>
+      </div>
+
+  </body>
+
+  <!--jqeury-->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+  <!-- source file-->
+  <script type="text/javascript" src="js/admin.js"></script>
+</html>

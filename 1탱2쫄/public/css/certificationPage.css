@@ -1,0 +1,118 @@
+@import url(//db.onlinewebfonts.com/c/82ac464059468e8dacb3d4d3f5c81253?family=Footlight+MT+Light);
+@import url(//db.onlinewebfonts.com/c/f23dd533e7ead1edf77c514e74fdc55c?family=OCRB);
+@font-face {
+    font-family: "Footlight";
+    src: url("//db.onlinewebfonts.com/t/82ac464059468e8dacb3d4d3f5c81253.eot"); src: url("//db.onlinewebfonts.com/t/82ac464059468e8dacb3d4d3f5c81253.eot?#iefix") format("embedded-opentype"), 
+    url("//db.onlinewebfonts.com/t/82ac464059468e8dacb3d4d3f5c81253.woff2") format("woff2"), 
+    url("//db.onlinewebfonts.com/t/82ac464059468e8dacb3d4d3f5c81253.woff") format("woff"), 
+    url("//db.onlinewebfonts.com/t/82ac464059468e8dacb3d4d3f5c81253.ttf") format("truetype"), 
+    url("//db.onlinewebfonts.com/t/82ac464059468e8dacb3d4d3f5c81253.svg#Footlight MT Light") format("svg"); }
+@font-face {font-family: "OCRB"; 
+    src: url("//db.onlinewebfonts.com/t/f23dd533e7ead1edf77c514e74fdc55c.eot"); 
+    src: url("//db.onlinewebfonts.com/t/f23dd533e7ead1edf77c514e74fdc55c.eot?#iefix") format("embedded-opentype"), 
+    url("//db.onlinewebfonts.com/t/f23dd533e7ead1edf77c514e74fdc55c.woff2") format("woff2"), 
+    url("//db.onlinewebfonts.com/t/f23dd533e7ead1edf77c514e74fdc55c.woff") format("woff"), 
+    url("//db.onlinewebfonts.com/t/f23dd533e7ead1edf77c514e74fdc55c.ttf") format("truetype"),
+        url("//db.onlinewebfonts.com/t/f23dd533e7ead1edf77c514e74fdc55c.svg#OCRB") format("svg"); 
+}
+#season{
+    left: 110px;
+    width: 150px; 
+    top: 157px; 
+    font-size: 3.3em; 
+    font-weight: bold;
+    font-family: Footlight; 
+    text-align: center;
+    font-style: italic;
+    color: white;
+    position: absolute;
+}
+#schoolId{
+    left: 140px;
+    width: 100px; 
+    top: 397px; 
+    font-size: 1em; 
+    font-weight: bold;
+    font-style: italic;
+    text-align: center; 
+    font-family: Footlight;
+    color: white;
+    position: absolute;
+}
+#name{
+    left: 380px;
+    width: 600px; 
+    top: 320px; 
+    font-size: 4em; 
+    font-weight: bold;
+    text-align: center;
+    font-style: italic; 
+    font-family: OCRB;
+    color: #1A254C;
+    position: absolute;
+    text-shadow: 2px 4px 2px gray;
+}
+#period{
+    left: 455px;
+    width: 140px; 
+    top: 600px; 
+    font-size: 1em; 
+    font-weight: bold;
+    text-align: center; 
+    color: #1A254C;
+    text-shadow: 1px 1px 1px gray;
+    position: absolute;
+}
+#date{
+    left: 770px;
+    width: 140px; 
+    top: 600px; 
+    font-size: 1em; 
+    font-weight: bold;
+    text-align: center; 
+    color: #1A254C;
+    text-shadow: 1px 1px 1px gray;
+    position: absolute;
+}
+#btnCertify{
+	border: none;
+	font-size: 18px;
+	font-weight: 400;
+	min-width: 180px;
+	padding: 20px;
+	border-radius: 14px;
+	background: #eb2b63;
+	color: #fff;
+    margin-top: 300px;
+	cursor: pointer;
+    text-align: center;
+    
+}
+#hash{
+    left: 430px;
+    width: 500px; 
+    top: 670px; 
+    font-size: 0.8em; 
+    font-style: italic;
+    text-align: center; 
+    color: gray;
+    text-shadow: 1px 1px 1px gray;
+    position: absolute;
+    text-decoration: underline;
+}
+
+.certifyContainer{
+    width:1000px;
+    height:716px;
+    float: left;
+
+}
+#download{
+    float:left;
+    margin-left:50px;
+    text-align: center;
+    
+    height:733px;
+    width:200px;
+
+}
