@@ -1,7 +1,6 @@
 <h1> Skkrypto 개발 프로젝트 1팀 "1탱 2쫄 팀"의 프로젝트</h1>
 <h2> "학회 홈페이지 및 학회원 학회활동 증명서 개발 진행 </h2>
 <br>
-- [Member](#about_team)
 <h3> 1. Member </h3>
 <div id="about_team">
 
@@ -12,3 +11,7 @@
 | 정채원 	| 4th 	| 홈페이지 Front-end 개발       	|
 
 
+<h3> 2. Objective </h3>
+<div id="about_objective">
+> a. Skkrypto의 학회 홈페이지를 만들어, 보다 효과적으로 Skkrypto의 소식을 전달하고 Recriuting을 용이하게 한다.
+  b. Skkrypto의 정식 학회 활동 기간을 수료한 학회원들에게 블록체인 기반 증명서를 제공한다.
