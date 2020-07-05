@@ -13,5 +13,5 @@
 
 <h3> 2. Objective </h3>
 <div id="about_objective">
-> a. Skkrypto의 학회 홈페이지를 만들어, 보다 효과적으로 Skkrypto의 소식을 전달하고 Recriuting을 용이하게 한다.
+> a. Skkrypto의 학회 홈페이지를 만들어, 보다 효과적으로 Skkrypto의 소식을 전달하고 Recriuting을 용이하게 한다.       
 > b. Skkrypto의 정식 학회 활동 기간을 수료한 학회원들에게 블록체인 기반 증명서를 제공한다.
