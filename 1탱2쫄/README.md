@@ -25,7 +25,6 @@
 <h3> 4. Details </h3>
 > a. Front-end 
 
-<br>
 (1) Home (index page) : 학회 소개 / 학회 브로슈어 다운로드 / What to study / Recruiting (포스터, 지원서 다운로드) / After Skkrypto 기능 구현 <br>
 (2) 학회 소개 (about page) : 학회 타임라인(연혁) / 학회 활동 이미지 슬라이드 / 학회 소개 카드뉴스 기능 구현 <br>
 (3) 학회원 소개 (service page) : 학회원 소개 (기수, 학과, position, e-mail) 기능 구현 <br>
@@ -34,7 +33,6 @@
 (6) 관리자 page : 관리자 page는 일반 user는 접근할 수 없게, metamask와 연동시켜 설정해둔 학회 wallet일 경우에만 들어갈 수 있게 기능을 구현 <br>
 이 페이지에서 학회원에 관한 학번, 활동 기간 등의 변수를 입력하고, Smart contract와 연동시켜 값이 블록체인에 기록되게 기능을 구현 <br>
 (7) All page 하단 기능 : 학회의 Facebook / Instagram / Brunch / Github 링크와 하단에도 메뉴를 넣어, 클릭할 수 있는 기능을 구현 <br>
-> a. Front-end 
 > b. Smart Contract 
 
 <h3> 5. Results </h3>
