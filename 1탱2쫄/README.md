@@ -24,6 +24,7 @@
 
 <h3> 4. Details </h3>
 > a. Front-end 
+
 <br>
 (1) Home (index page) : 학회 소개 / 학회 브로슈어 다운로드 / What to study / Recruiting (포스터, 지원서 다운로드) / After Skkrypto 기능 구현 <br>
 (2) 학회 소개 (about page) : 학회 타임라인(연혁) / 학회 활동 이미지 슬라이드 / 학회 소개 카드뉴스 기능 구현 <br>
