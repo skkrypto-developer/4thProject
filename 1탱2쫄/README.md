@@ -16,7 +16,7 @@
 > a. Skkrypto의 학회 홈페이지를 만들어, 보다 효과적으로 Skkrypto의 소식을 전달하고 Recruiting을 용이하게 한다. <br>      
 > b. Skkrypto의 정식 학회 활동 기간을 수료한 학회원들에게 블록체인 기반 증명서를 제공하여, 이력을 정확하게 증명할 수 있게 하고 학회에 관한 소속감을 제고시킨다.
 
-<h3> 3. How to developing </h3>
+<h3> 3. How to develop</h3>
 > a. Front-end : Html, CSS, Javascript, Bootstrap 활용 (기존의 무료 템플릿에서 여러 코드를 추가하여 만듦) <br>
 > b. Smart-contract :  <br>
 > C. 서버 연결 및 라우팅 : Node.js 이용 <br>
