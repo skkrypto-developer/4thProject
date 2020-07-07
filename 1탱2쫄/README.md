@@ -25,7 +25,7 @@
 <h3> 4. Details </h3>
 > a. Front-end 
 
-(1) Home (index page) : 학회 소개 / 학회 브로슈어 다운로드 / What to study / Recruiting (포스터, 지원서 다운로드) / After Skkrypto 기능 구현 <br>
+>(1) Home (index page) : 학회 소개 / 학회 브로슈어 다운로드 / What to study / Recruiting (포스터, 지원서 다운로드) / After Skkrypto 기능 구현 <br>
 (2) 학회 소개 (about page) : 학회 타임라인(연혁) / 학회 활동 이미지 슬라이드 / 학회 소개 카드뉴스 기능 구현 <br>
 (3) 학회원 소개 (service page) : 학회원 소개 (기수, 학과, position, e-mail) 기능 구현 <br>
 (4) 학회 활동 증명서 조회 (blog page) : 학회원의 학번을 입력하여 증명서를 이미지 파일로 다운로드 받을 수 있는 기능 구현 (단, PC 버전에서만 가능함. 모바일은 연동하지 못함) <br>
