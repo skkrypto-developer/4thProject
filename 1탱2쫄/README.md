@@ -49,7 +49,7 @@ smart contract와 프론트가 연동된 페이지는 크게 두페이지이다.
 <li>관리자 페이지</li>
 <li>학회 활동 증명서 조회 페이지</li>
 </ol>
-web3js를 통하여 이더리움 상의 컨트랙트와 연동함(admin.js)<br>
+web3js와 메타마스크를 통하여 이더리움 상의 컨트랙트와 연동함(admin.js)<br>
 
 
 <h3> 5. Results </h3>
