@@ -19,7 +19,7 @@
 <h3> 3. How to develop</h3>
 > a. Front-end : Html, CSS, Javascript, Bootstrap 활용 (기존의 무료 템플릿에서 여러 코드를 추가하여 만듦) <br>
 > b. Smart-contract :  <br>
-> C. 서버 연결 및 라우팅 : Node.js 이용 <br>
+> C. 서버 연결 및 라우팅 : Node.js, express 이용 <br>
 > D. Front-end와 Smart-contract 연동 : <br>
 
 <h3> 4. Details </h3>
@@ -35,6 +35,22 @@
 (7) All page 하단 기능 : 학회의 Facebook / Instagram / Brunch / Github 링크와 하단에도 메뉴를 넣어, 클릭할 수 있는 기능을 구현 <br>
 
 <h4> b. SmartContract </h4> 
+<h4> c. 서버 연결 및 라우팅 </h4> 
+
+>(1) web.js : 서버 구동의 중심이 되는 파일. <br>
+(2) app.js : 어플리케이션의 중심이 되는파일  서버 설정 / 미들웨어 정의 / 라우트 정의 / 서버 운영을 위한 로직 정의 <br>
+(3) views 폴더 : html파일이 들어있는 폴더. <br>
+(4) routes 폴터 : 라우팅한 파일을 모아둔 폴더. get형식의 간단한 페이지만 존재하기에 한 파일에 모음<br>
+
+<h4> d. Front와 smart contract 연동 </h4> 
+
+smart contract와 프론트가 연동된 페이지는 크게 두페이지이다.<br>
+<ol>
+<li>관리자 페이지</li>
+<li>학회 활동 증명서 조회 페이지</li>
+</ol>
+admin.js 파일에 web3js를 통하여 이더리움 상의 컨트랙트와 연동함<br>
+
 
 <h3> 5. Results </h3>
 Responsive Webapplication homepage & Certification (in homepage) <br>
