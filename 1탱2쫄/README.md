@@ -54,7 +54,7 @@
 </ol>
 web3js와 메타마스크를 통하여 이더리움 상의 컨트랙트와 연동함(admin.js)<br>
 
-![ex_screenshot](./md_img/1T2Zv2.jpg)
+![ex_screenshot](./md_img/1T2Zcerti.jpg)
 
 <h3> 5. Results </h3>
 Responsive Webapplication homepage & Certification (in homepage) <br>
