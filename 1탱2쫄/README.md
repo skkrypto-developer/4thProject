@@ -44,7 +44,7 @@
 
 <h4> d. Front와 smart contract 연동 </h4> 
 
-두개의 페이지에서 프론트와 smart contract를 <br>
+두개의 페이지에서 프론트와 smart contract를 연동함<br>
 <ol>
 <li>관리자 페이지</li>
 <li>학회 활동 증명서 조회 페이지</li>
