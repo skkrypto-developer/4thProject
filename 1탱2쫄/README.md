@@ -20,7 +20,7 @@
 > a. Front-end : Html, CSS, Javascript, Bootstrap 활용 (기존의 무료 템플릿에서 여러 코드를 추가하여 만듦) <br>
 > b. Smart-contract :  <br>
 > C. 서버 연결 및 라우팅 : Node.js, express 이용 <br>
-> D. Front-end와 Smart-contract 연동 : <br>
+> D. Front-end와 Smart-contract 연동 : web3js와 메타마스크 이용<br>
 
 <h3> 4. Details </h3>
 <h4>a. Front-end </h4> 
@@ -44,7 +44,7 @@
 
 <h4> d. Front와 smart contract 연동 </h4> 
 
-smart contract와 프론트가 연동된 페이지는 크게 두페이지이다.<br>
+두개의 페이지에서 프론트와 smart contract를 <br>
 <ol>
 <li>관리자 페이지</li>
 <li>학회 활동 증명서 조회 페이지</li>
