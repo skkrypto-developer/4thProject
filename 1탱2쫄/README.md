@@ -25,8 +25,8 @@
 <h3> 3. How to develop</h3>
 > a. Front-end : Html, CSS, Javascript, Bootstrap 활용 (기존의 무료 템플릿에서 여러 코드를 추가하여 만듦) <br>
 > b. Smart-contract :  <br>
-> C. 서버 연결 및 라우팅 : Node.js, express 이용 <br>
-> D. Front-end와 Smart-contract 연동 : web3js와 메타마스크 이용<br>
+> c. 서버 연결 및 라우팅 : Node.js, express 이용 <br>
+> d. Front-end와 Smart-contract 연동 : web3js와 메타마스크 이용<br>
 
 <h3> 4. Details </h3>
 <h4>a. Front-end </h4> 
