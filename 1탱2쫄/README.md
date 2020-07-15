@@ -29,7 +29,7 @@
 > d. Front-end와 Smart-contract 연동 : web3js와 메타마스크 이용<br>
 
 <h3> 4. Details </h3>
-<h4>a. Front-end </h4> 
+<h4> a. Front-end </h4> 
 
 >(1) Home (index page) : 학회 소개 / 학회 브로슈어 다운로드 / What to study / Recruiting (포스터, 지원서 다운로드) / After Skkrypto 기능 구현 <br>
 (2) 학회 소개 (about page) : 학회 타임라인(연혁) / 학회 활동 이미지 슬라이드 / 학회 소개 카드뉴스 기능 구현 <br>
@@ -46,7 +46,7 @@
 >(1) web.js : 서버 구동의 중심이 되는 파일. <br>
 (2) app.js : 어플리케이션의 중심이 되는파일  서버 설정 / 미들웨어 정의 / 라우트 정의 / 서버 운영을 위한 로직 정의 <br>
 (3) views 폴더 : html파일이 들어있는 폴더. <br>
-(4) routes 폴터 : 라우팅한 파일을 모아둔 폴더. get형식의 간단한 페이지만 존재하기에 한 파일에 모음<br>
+(4) routes 폴더 : 라우팅한 파일을 모아둔 폴더. get형식의 간단한 페이지만 존재하기에 한 파일에 모음<br>
 
 <h4> d. Front와 smart contract 연동 </h4> 
 
