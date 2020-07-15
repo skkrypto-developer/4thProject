@@ -10,6 +10,9 @@
 | 박승호 	| 5th 	| 스마트 컨트랙트 & 증명서 개발 	|
 | 정채원 	| 4th 	| 홈페이지 Front-end 개발       	|
 
+ ![ex_screenshot](./md_img/intro.png)
+
+
 
 <h3> 2. Objective </h3>
 <div id="about_objective">
