@@ -16,7 +16,7 @@
 > a. Skkrypto의 학회 홈페이지를 만들어, 보다 효과적으로 Skkrypto의 소식을 전달하고 Recruiting을 용이하게 한다. <br>      
 > b. Skkrypto의 정식 학회 활동 기간을 수료한 학회원들에게 블록체인 기반 증명서를 제공하여, 이력을 정확하게 증명할 수 있게 하고 학회에 관한 소속감을 제고시킨다.
   
-  ![ex_screenshot](./md_img/1T2Z.PNG)
+  ![ex_screenshot](./readmeimg/sf.png)
   
 
 <h3> 3. How to develop</h3>
