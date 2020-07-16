@@ -41,6 +41,7 @@
 (7) All page 하단 기능 : 학회의 Facebook / Instagram / Brunch / Github 링크와 하단에도 메뉴를 넣어, 클릭할 수 있는 기능을 구현 <br>
 
 <h4> b. SmartContract </h4> 
+
 >(1) Member 구조체 : 학회원의 개개인의 참여 정보를 담는 객체. <br>
 (2) Certificate 구조체 : 수료증을 발급 기록을 담는 객체. <br>
 (3) isActive Mapping : 학회원의 참여 정도를 구분하는 mapping. 현 활동 중인 학회원과 활동을 마친 학회원 구분을 목적으로 함. <br>
