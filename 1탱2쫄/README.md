@@ -24,7 +24,7 @@
 
 <h3> 3. How to develop</h3>
 > a. Front-end : Html, CSS, Javascript, Bootstrap 활용 (기존의 무료 템플릿에서 여러 코드를 추가하여 만듦) <br>
-> b. Smart-contract :  <br>
+> b. Smart-contract :  Solidity, Ropsten 테스트넷 활용<br>
 > c. 서버 연결 및 라우팅 : Node.js, express 이용 <br>
 > d. Front-end와 Smart-contract 연동 : web3js와 메타마스크 이용<br>
 
@@ -41,6 +41,18 @@
 (7) All page 하단 기능 : 학회의 Facebook / Instagram / Brunch / Github 링크와 하단에도 메뉴를 넣어, 클릭할 수 있는 기능을 구현 <br>
 
 <h4> b. SmartContract </h4> 
+>(1) Member 구조체 : 학회원의 개개인의 참여 정보를 담는 객체. <br>
+(2) Certificate 구조체 : 수료증을 발급 기록을 담는 객체. <br>
+(3) isActive Mapping : 학회원의 참여 정도를 구분하는 mapping. 현 활동 중인 학회원과 활동을 마친 학회원 구분을 목적으로 함. <br>
+(4) members Mapping : 학회원 개개인을 식별하여 해당 Member 구조체를 value로 갖는 mapping. <br>
+(5) isValid Mapping : 발급된 수료증의 유효성 여부를 구분하는 mapping. <br>
+(6) certificates Mapping : 수료한 학회원을 식별하여 해당 Certificate 구조체를 value로 갖는 mapping. <br>
+(7) register 함수 : 신규 학회원의 정보를 등록하는 역할. <br>
+(8) graduate 함수 : 학회 활동을 마친 학회원에 대해 수료 인증하는 역할. <br>
+(9) issue 함수 : 조건을 만족하는 학회원에 대해 수료증을 발급하는 역할. <br>
+(10) showIssue 함수 : 수료증 발급을 위한 정보를 보여주는 역할. <br>
+(11) update 함수 : 학회원의 등록 정보를 변경하는 역할.  <br>
+
 <h4> c. 서버 연결 및 라우팅 </h4> 
 
 >(1) web.js : 서버 구동의 중심이 되는 파일. <br>
