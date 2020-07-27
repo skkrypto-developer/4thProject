@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <%- include('./partial/head') %>
+  </head>
+   
+    <style>
+
+      /* 네비게이션 바와 떨어뜨렸으나, footer 부분이 안보임. 수정 필요 */
+      main {
+        width: 1000px;
+      }
+
+      h1 {
+        animation: none;
+      }
+
+      ul {
+         overflow: hidden;
+         display: table;
+         margin-left: auto;
+         margin-right: auto;
+        }
+
+      /* margin 크기에 따라 변하기 때문에, 임의적임. 정렬을 정확히 할 방법을 찾아야 함. */  
+      li { 
+        float: left;        
+        margin: 36px;
+        margin-bottom: 24px; 
+        width: calc(25% - 20px); 
+        background: #fff; 
+        text-align: center; 
+      }      
+  
+      .card-img-top {
+        width: 100%;
+        height: 150px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+      }      
+  
+      .card-text {
+        color: rgb(73,71,71)
+      }
+      
+      /* :root는 변수를 설정하여 css로 일괄 변경을 하는 코드 */
+      :root {
+        --jumbotron-padding-y: 2rem;
+      }
+  
+      .jumbotron {
+        padding-top: var(--jumbotron-padding-y);
+        padding-bottom: var(--jumbotron-padding-y);
+        margin-bottom:0;
+        background-color:#fff
+      }
+  
+      @media (min-width: 768px) {
+        .jumbtron {
+          padding-top: calc(var(--jumbotron-padding-y)*2);
+          padding-bottom: calc(var(--jumbotron-padding-y)*2);
+        }
+      }
+
+      .lead.text-muted {
+        color:rgb(73,71,71);
+      }
+
+      .btn.btn-primary.my-2 {
+        background-color: #4CAF50;
+        border: 0;
+        outline: 0;
+      }
+            
+      .jumbtron p:last-child {
+        margin-bottom: 0;
+      }
+  
+      .jumbtron-heading {
+        font-weight: 300;
+        color: black;
+      }
+  
+      .jumbtron .container {
+        
+        max-width: 40rem;
+      }
+  
+      .box-shadow {box-shadow: .25rem .75rem rgba(0,0,0,.05);}
+  
+      </style>
+
+  <body class="text-center">
+    <div class="cover-container d-flex w-200 h-200 p-3 mx-auto flex-column">
+  
+  <!--헤더 부분-->      
+  <header class="masthead">
+    <%- include('./partial/nav') %>
+  </header>
+  <!--헤더 부분 끝-->
+
+  <!--가운데 메인 부분-->
+  <main role="main" class="inner cover">
+    <section class="jumbotron text-center" style="background-color:#F1F1F1;">
+      <div class="container">
+        <h1 class="jumbotron-heading" style= "color:black;" ><b>Survey List</b></h1>
+        <p class="lead text-muted" style="color:rgb(73,71,71);">
+          <br>여러분이 직접 만드신 설문조사의 목록을 보실 수 있습니다. 
+          <br>또한, 목록에 있는 설문조사에 참여하여 토큰을 얻어가세요!</p>
+        <p> <!-- 버튼 용도에 따라 없애거나 수정하기 -->
+          <a href="/create_survey" class="btn btn-primary my-2">Create Survey</a>          
+        </p>
+      </div>
+    </section>
+
+
+
+    <div class="List py-4 bg-light" style="background-color: #ffffff;">
+      <div class="container">  
+
+
+        <% for(var i = 0; i < results.length; i+=3){ %>
+        <ul>
+          <li>
+            <div class="row">
+              <div clss="col-md-4">
+                <div class="card mb-4 box-shadow">
+                  <img class="card-img-top" src="/css/survey<%=i%6+1 %>_img.jpg">
+                  <div class="card-body">
+                    <p class="card-text"><%=results[i]%> </p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        
+                        <button type="button" class="btn btn-sm btn-outline-secondary">참여하기</button>
+                      </div>
+                      <small class="text-muted">예상소요시간</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <% if(i+1 > results.length) break; %>
+          <li>    
+            <div class="row">
+              <div clss="col-md-4">
+                <div class="card mb-4 box-shadow">
+                  <img class="card-img-top" src="/css/survey<%=(i+1)%6+1 %>_img.jpg" alt="이미지 준비중">
+                  <div class="card-body">
+                    <p class="card-text"><%=results[i+1]%> </p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        
+                        <button type="button" class="btn btn-sm btn-outline-secondary">참여하기</button>
+                      </div>
+                      <small class="text-muted">예상소요시간</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="row">
+              <div clss="col-md-4">
+                <div class="card mb-4 box-shadow">
+                  <img class="card-img-top" src="/css/survey<%=(i+2)%6+1 %>_img.jpg" alt="이미지 준비중">
+                  <div class="card-body">
+                    <p class="card-text"><%=results[i+2]%> </p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        
+                        <button type="button" class="btn btn-sm btn-outline-secondary">참여하기</button>
+                      </div>
+                      <small class="text-muted">예상소요시간</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>   
+        </ul>  
+        <% } %>
+      
+      
+      
+      
+      
+      
+      </div>
+    </div> 
+       
+      <!--  
+        <ul>
+          <li>
+            <div class="row">
+              <div clss="col-md-4">
+                <div class="card mb-4 box-shadow">
+                  <img class="card-img-top" data-src="/" alt="이미지 준비중">
+                  <div class="card-body">
+                    <p class="card-text">이것은 설문조사 목록에 있는 설문지 중 하나입니다. </p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-outline-secondary">미리보기</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">참여하기</button>
+                      </div>
+                      <small class="text-muted">예상소요시간</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>  
+
+          <li>
+            <div class="row">
+              <div clss="col-md-4">
+                <div class="card mb-4 box-shadow">
+                  <img class="card-img-top" data-src="/" alt="이미지 준비중">
+                  <div class="card-body">
+                    <p class="card-text">이것은 설문조사 목록에 있는 설문지 중 하나입니다. </p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-outline-secondary">미리보기</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">참여하기</button>
+                      </div>
+                      <small class="text-muted">예상소요시간</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li>  
+            <div class="row">
+              <div clss="col-md-4">
+                <div class="card mb-4 box-shadow">
+                  <img class="card-img-top" data-src="/" alt="이미지 준비중">
+                  <div class="card-body">
+                    <p class="card-text">이것은 설문조사 목록에 있는 설문지 중 하나입니다. </p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-outline-secondary">미리보기</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">참여하기</button>
+                      </div>
+                      <small class="text-muted">예상소요시간</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>  
+        </ul>   
+      
+      -->
+     
+    
+  </main>
+  <!--가운데 메인 부분 끝-->
+
+<!--맨 아랫부분-->
+  <footer class="mastfoot mt-auto">
+      <div class="inner">
+      <p>Prototype for <a href="https://getbootstrap.com/">survey service</a></p>
+    </div>
+  </footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script type="text/javascript" src="../public/js/signin.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <%- include('./partial/head') %>
+  </head>
+
+  <style>
+  /* Full-width input fields */
+  #address {
+    color :black;
+  }
+
+  h1 {
+      animation: none;
+      font-weight: 600;
+      margin-bottom: 40px;
+      }
+
+
+  input[type=text] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+  }  
+
+  input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+  }  
+  
+  input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  
+  /* 모든 버튼의 색*/
+  button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+  }
+
+  button:hover {
+    opacity: 1;
+  }
+  
+  /* signup page 글씨 수정  */
+  .container {
+    padding: 16px;
+    color: black;
+  }
+
+  .cancelbtn {
+    float: left;
+    width: 50%;
+    background-color: #d33434;
+  }
+
+  .signupbtn {
+    float: left;
+    width: 50%;
+  }
+  
+
+
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: #474e5d;
+    padding-top: 50px;
+}
+
+  .modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%; /* 사이즈에 따라 수정해야 함 */
+  }
+
+  .close {
+    position: absolute;
+    right: 35px;
+    top: 15px;
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+  }
+
+  .close:hover, .close:focus {
+    color: #f44336;
+    cursor: pointer;
+  }
+
+  .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  @media screen and (max-width: 300px) {
+    .cancelbtn, .signupbtn {
+      width: 100%;
+    }
+  }
+  </style>
+
+  <body class="text-center">
+    <div class="cover-container d-flex w-200 h-200 p-3 mx-auto flex-column">
+  
+  <!--헤더 부분-->      
+  <header class="masthead">
+    <%- include('./partial/nav') %>
+  </header>
+  <!--헤더 부분 끝-->
+
+  <!--가운데 메인 부분-->
+  <main role="main" class="inner cover">
+    
+    <h1>Sign Up Form</h1>
+
+    <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Click Me!</button>
+
+    <div id="id01" class="modal">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      
+      
+      <form class="modal-content" action="/signin/join" method = "post">
+        <div class="container">
+          <h1>Sign Up</h1>
+          <p>Please fill in this form to create an account.</p>
+          <hr>
+          <label for="uid"><b>ID</b></label>
+          <input type="text" placeholder="user ID" name="uid" required>
+
+          <label for="uname"><b>Username</b></label>
+          <input type="text" placeholder="Enter Username" name="uname" required>
+
+          <label for="email"><b>Email</b></label>
+          <input type="text" placeholder="Enter Email" name="email" required>
+          <label for="address"><b>Address</b></label>
+          <input type="text" placeholder="" name="address" required>
+
+          <!-- 지갑 주소 입력란 추가하기 -->
+
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+
+          <label for="psw_repeat"><b>Repeat Password</b></label>
+          <input type="password" placeholder="Repeat Password" name="psw_repeat" required>
+          
+          <label>
+            <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+          </label>
+
+          <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+          <div class="clearfix">
+            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+            <button type="submit" class="signupbtn">Sign Up</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <script>
+    // Get the modal
+    var modal = document.getElementById('id01');
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+    </script>
+
+
+  
+</main>
+  <!--가운데 메인 부분 끝-->
+
+<!--맨 아랫부분-->
+  <footer class="mastfoot mt-auto">
+      <div class="inner">
+      <p>Prototype for <a href="https://getbootstrap.com/">survey service</a></p>
+    </div>
+  </footer>
+</div>
+</body>
+
+<script type="text/javascript" src="js/signin.js"></script>
+  
+</html>

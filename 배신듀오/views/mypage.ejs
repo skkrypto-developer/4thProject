@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <%- include('./partial/head') %>
+
+    <style>
+      /* Column container */
+      h1 {
+        animation: none;
+      }
+
+      .row {  
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .my_info {
+        color: black;
+
+      }
+
+      /* Create two unequal columns that sits next to each other */
+      /* Sidebar/left column */
+      .side {
+        flex: 10%;
+        background-color: #f1f1f1;
+        padding: 20px;
+      }
+
+      /* Main column */
+      .main {   
+        flex: 90%;
+        background-color: white;
+        border-color: white;
+        border-style: solid;
+        padding: 20px;
+      }
+
+      .box {
+        height: 200px;
+        width: 200px;
+        line-height: 200px;
+        background-color: #f0e9e9;       
+        display:inline-block;
+        margin-bottom: 15px;
+        margin-left:30px;
+      }
+
+      /* Fake image, just for this example */
+      .fakeimg {
+        background-color: #9e9393;
+        width: 100%;
+        padding: 20px;
+      } 
+
+      .uname {
+        background-color: #eeeeee;  
+        border-left: 10px solid #c0c0c0;
+        margin-bottom: 15px;
+        padding: 12px 24px;
+        text-align:start;
+     
+      }
+
+      .uid {
+        background-color: #eeeeee;
+        border-left: 10px solid #c0c0c0;
+        margin-bottom: 15px;
+        padding: 12px 24px;
+        text-align:start; 
+      }
+
+      .email {
+        background-color: #eeeeee;
+        border-left: 10px solid #c0c0c0;
+        margin-bottom: 15px;
+        padding: 12px 24px;
+        text-align:start; 
+      }
+
+      .address {
+        background-color: #eeeeee; 
+        border-left: 10px solid #c0c0c0;
+        margin-bottom: 15px;
+        padding: 12px 24px;
+        text-align:start; 
+      }
+
+      ul {
+         overflow: hidden;
+         display: table;
+         margin-left: 50px;
+         padding:0;
+         
+        }
+
+      /* margin 크기에 따라 변하기 때문에, 임의적임. 정렬을 정확히 할 방법을 찾아야 함. */  
+      li { 
+        float: left;
+        margin: 26px; 
+        width: 140px; 
+        background: #fff; 
+        text-align: center; 
+      }      
+  
+      .card-img-top {
+        width: 100%;
+        height: 200px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+
+      :root {
+        --jumbotron-padding-y: 2rem;
+      }
+  
+      .jumbotron {
+        padding-top: var(--jumbotron-padding-y);
+        padding-bottom: var(--jumbotron-padding-y);
+        margin-bottom:0;
+        background-color:#fff
+      }
+  
+      @media (min-width: 768px) {
+        .jumbtron {
+          padding-top: calc(var(--jumbotron-padding-y)*2);
+          padding-bottom: calc(var(--jumbotron-padding-y)*2);
+        }
+      }
+    
+      .jumbtron p:last-child {
+        margin-bottom: 0;
+      }
+  
+      .jumbtron-heading {
+        font-weight: 300;
+        color: black;
+      }
+  
+      .jumbtron .container {
+        
+        max-width: 40rem;
+      }
+  
+      .box-shadow {box-shadow: .25rem .75rem rgba(0,0,0,.05);}
+
+      .Info {
+        font-size: 20px;
+        font-weight: 700;
+        color: rgb(73, 71, 71);
+        
+      }
+
+      span.text{
+        text-align:right;
+        font-size: 18px;  
+        color:rgb(73,71,71);
+      }
+      
+      
+
+
+
+      /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+      @media screen and (max-width: 700px) {
+        .row {   
+          flex-direction: column;
+        }
+      }
+
+    </style>
+  </head>
+
+  <body class="text-center">
+    <div class="cover-container d-flex w-200 h-200 p-3 mx-auto flex-column">
+  
+  <!--헤더 부분-->      
+  <header class="masthead">
+    <%- include('./partial/nav') %>
+  </header>
+  <!--헤더 부분 끝-->
+
+  <!--가운데 메인 부분-->
+  <main role="main" class="inner cover">
+    <div class="row">
+      <div class="side">
+        <h1 class="my_info mb-3"><b>My Page</b></h1>
+        <p style="color:rgb(73,71,71); font-size: 20px;">내 정보와 설문 참여 기록을 확인하세요.</p>  
+        
+                   
+       </div>
+      <div class="main">
+        <h2 class="my_info mb-3" style="text-align: start; "><b>내 정보</b></h2><br>
+        <p style="color:rgb(73, 71, 71);  font-style: oblique;">현재 보유하고 있는 코인은 메타마스크를 통해 확인할 수 있습니다!</p>
+      
+          <div class="uname">
+            <p style="margin-bottom: 8px; margin-top: 8px;">
+              <span class="Info">User Name</span>
+              <span class="text" style="margin-left: 30px;"><%= session.uname%></span></p>
+          </div>
+
+          <div class="uid">
+            <p style="margin-bottom: 8px; margin-top: 8px;">
+              <span class="Info">User Id</span>
+              <span class="text" style="margin-left: 68px;"><%= session.uid%></span></p>
+          </div>
+          
+          <div class="email">
+            <p style="margin-bottom: 8px; margin-top: 8px;">
+              <span class="Info">Email</span> 
+              <span class="text" style="margin-left: 83.2px;"><%= session.email%></span></p>
+          </div>
+          
+          <div class="address">
+            <p style="margin-bottom: 8px; margin-top: 8px;">
+              <span class="Info">Address</span>
+              <span class="text" style="margin-left: 59.1px;"><%= session.address%></span></p>
+          </div>         
+
+          <h2 class="my_survey mt-5 mb-5" style="text-align: start; color:black;"><b>내 설문기록</b></h2>
+        <div>
+            
+        </div>
+        <ul>
+          <% for(var i = 0; i < results.length; i++){ %>  
+          <li>
+            <div class="drow">
+              <div clss="col-md-4">
+                <div class="card mb-4 box-shadow">
+                  <img class="card-img-top" src="/css/survey<%=i%6+1 %>_img.jpg" alt="이미지 준비중">
+                  <div class="card-body">                    
+                    <div class="d-flex justify-content-between align-items-center" style= "margin-left: 12.5px;">
+                      <div class="btn-group">                        
+                        <button type="button" class="btn btn-sm btn-outline-secondary">결과보기</button>
+                      </div>            
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        
+          <% } %>
+        </ul>   
+        
+   
+      </div>
+    </div>
+  </main>
+  <!--가운데 메인 부분 끝-->
+
+<!--맨 아랫부분-->
+  <footer class="mastfoot mt-100">
+      <div class="inner">
+      <p>Prototype for <a href="">Survey Service.</a></p>
+    </div>
+  </footer>
+</div>
+</body>
+
+<script type="text/javascript" src="./js/mypage.js"></script>
+
+</html>

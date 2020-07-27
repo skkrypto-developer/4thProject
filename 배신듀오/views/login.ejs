@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <%- include('./partial/head') %>
+  </head>
+
+  <body class="text-center">
+    <div class="cover-container d-flex w-200 h-200 p-3 mx-auto flex-column">
+      
+    <style>
+      form {
+        border: 3px solid #f1f1f1;
+        padding-bottom: 25px;
+        margin-bottom: 80px;
+      }
+
+      h1 {
+        animation: none;
+        font-weight: 600px;
+        margin-bottom: 24px;
+      }
+
+      input[type=text] {
+        width: 50%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+      }
+
+      input[type=password] {
+        width: 50%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+      }
+
+      button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: none;
+        cursor: pointer;
+        width: 50%;        
+        border: 0;
+        outline: 0;
+      }
+
+      button:hover {
+        opacity: 0.8;
+      }
+     
+      .imgcontainer {
+        text-align: center;
+        margin: 24px 0 12px 0;
+      }
+
+
+      img.avatar {
+        width: 40%;
+        border-radius: 50%;
+      }
+      
+      span.signup {
+        font-size: 18px;
+        font-weight: 400;
+        color: rgb(138, 134, 134);
+      }
+
+      @media screen and (max-width: 300px) {
+        span.signup {
+          display: block;
+          float: none;
+        }                
+      }
+    </style>  
+  
+  <!--헤더 부분-->      
+  <header class="masthead">
+    <%- include('./partial/nav') %>
+  </header>
+  <!--헤더 부분 끝-->
+
+  <!--가운데 메인 부분-->
+  <main role="main" class="inner cover">
+    <!--로그인 form-->
+    <h1>Login</h1>
+
+    <form action="/login/join" method="post">
+      <div class="imgcontainer"></div>      
+          
+      <div class="container">
+        <div>
+          <label for="UID"><b>ID</b></label>
+        </div>  
+          <input type="text" placeholder="Enter Username" name="UID" required>
+        
+
+        <div>
+          <label for="psw"><b>Password</b></label>
+        </div>  
+          <input type="password" placeholder="Enter Password" name="psw" required>
+        
+        <button type="submit">Login</button>                
+        <div>
+          <label>
+            <br><input type="checkbox" checked="checked" name="remember">Remember Information  
+          </label>   
+        </div>
+      </div>  
+
+      <div class="container" >       
+        <span class="signup">Don't have an account? <a href="/signin" style="color: white;">Sign-up</a></span>
+      </div>
+    </form>
+
+</main>
+
+  <!--가운데 메인 부분 끝-->
+
+<!--맨 아랫부분-->
+  <footer class="mastfoot mt-auto">
+      <div class="inner">
+      <p>Prototype for <a href="https://getbootstrap.com/">survey service</a></p>
+    </div>
+  </footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <%- include('./partial/head') %>
+  </head>
+
+  <style>
+    #target {
+      font-size : 18px;
+    }
+
+    .inner.cover {
+      margin-bottom: 200px;
+    }
+
+    p {
+      font-size: 19px;
+      font-weight: 100px;
+      font-style: normal;
+    }
+    
+    .title {
+      font-weight: 700;
+      animation: none;
+      margin-bottom: 75px;
+    }
+
+    .gtext {
+      margin-bottom: 25px;
+
+    }
+
+    .ctext {
+      margin-bottom: 75px;
+    }
+
+    .btn {
+      font-size: 18px;
+      border: none;
+      color: none;
+      padding: 20px 30px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 20px;
+      margin: 10px 20px;
+      transition-duration: 0.3s;
+      cursor: pointer;      
+    }
+
+    .btn1 {
+      background-color:#4CAF50;
+      color: none;
+      border: none;
+    }
+
+    .btn.btn1:hover {
+      background-color: transparent;
+      color: black;
+      border: 4px solid #4CAF50;
+    }
+
+    .btn2 {
+      background-color: #d33434;
+      color: none;
+      border: none;
+    }
+
+    .btn.btn2:hover {
+      background-color: transparent;
+      color: black;
+      border: 4px solid #d33434; 
+    }
+
+  </style>
+
+  <body class="text-center">
+    <div class="cover-container d-flex w-200 h-200 p-3 mx-auto flex-column">
+
+   <!--헤더 부분-->      
+   <header class="masthead">
+    <%- include('./partial/nav') %>
+  </header>
+  <!--헤더 부분 끝-->
+
+
+  <main role="main" class="inner cover">
+    <h1 class="title">Create Survey</h1>
+
+    <p class="gtext">Google Form을 통해 설문조사를 만드실 수 있습니다.</p>
+    <p class="ctext">저희가 제공하는 서비스를 통해 직접 설문조사를 만들 수 있습니다.</p>
+
+    <button class="btn btn1"><a href = "https://www.google.com/forms/about/" style="text-decoration: none;">Google Form</a></button>
+    <button class="btn btn2" id = "traget"><a href = "create_survey_detail" style="text-decoration: none;">Create Survey</a></button>
+
+
+    
+
+  </main>
+
+   <!--가운데 메인 부분 끝-->
+
+  <!--맨 아랫부분-->
+  <footer class="mastfoot mt-auto">
+    <div class="inner">
+    <p>Prototype for <a href="https://getbootstrap.com/">survey service</a></p>
+  </div>
+  </footer>
+  </div>
+  </body>
+  <script type="text/javascript" src="./js/create.js"></script>
+  </html>
+
