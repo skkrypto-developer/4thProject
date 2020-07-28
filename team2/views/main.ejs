@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel= "stylesheet" type="text/css" href="css/main.css">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script>
+            $('.fun-btn').on('click', function(event) {
+            $(this).toggleClass('start-fun');
+            var $page = $('.page');
+            $page.toggleClass('color-bg-start')
+                .toggleClass('bg-animate-color');
+            $(this).hasClass('start-fun') ?
+                $(this).text('stop the fun') :
+                $(this).text('start the fun');
+            });
+        </script>
+        <script src="js/main.js"></script>
+    </head>
+    <body>
+        <div class="text-center">
+            <label class = "jackpot">Jackpot : 0 eth</label>
+            <div class = "balls">
+                <div>
+                    <img src="images/white-ball.png" height='100px' width='100px'>
+                    <input class="input-box" type="number" pattern="[1-69]*" id = "pick-1" maxlength="2">
+                </div>
+                <div>
+                    <img src="images/white-ball.png" height='100px' width='100px'>
+                    <input class="input-box" type="number" pattern="[1-69]*" id = "pick-2" maxlength="2">
+                </div>
+                <div>
+                    <img src="images/white-ball.png" height='100px' width='100px'>
+                    <input class="input-box" type="number" pattern="[1-69]*" id = "pick-3" maxlength="2"">
+                </div>
+                <div>
+                    <img src="images/white-ball.png" height='100px' width='100px'>
+                    <input class="input-box" type="number" pattern="[1-69]*" id = "pick-4" maxlength="2">
+                </div>
+                <div>
+                    <img src="images/white-ball.png" height='100px' width='100px'>
+                    <input class="input-box" type="number" pattern="[1-69]*" id = "pick-5" maxlength="2">
+                </div>
+                <div>
+                    <img src="images/red-ball.png" height='100px' width='100px'>
+                    <input class="input-box" type="number" pattern="[1-26]*" id = "pick-p" maxlength="2">
+                </div>
+            </div>
+            <div class = "page">
+                <button class="fun-btn">Bet!</button>
+            </div>
+        </div>
+        <span id="myAddress"></span>
+        <span id="balance"></span>
+        <!-- <div class="container">
+            <div>
+                <span id="draw0"></span>
+            </div>
+            <div>
+                <span id="draw1"></span>
+            </div>
+            <div>
+                <span id="draw2"></span>
+            </div>
+            <div2
+                <span id="draw3"></span>
+            </div>
+            <div>
+                <span id="draw4"></span>
+            </div>
+            <div>
+                <span id="draw5"></span>
+            </div>
+        </div> -->
+    </body>
+</html>
