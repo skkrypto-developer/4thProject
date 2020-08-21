@@ -1,6 +1,4 @@
-// const admin = "0x4D071014619015986ad747f680f55CF0cF790D5c";
-const admin = "0x60A1c0D81347035CA2F12Cd5117EA5135fA2DEd8".toLowerCase();
-
+const admin = "0x4D071014619015986ad747f680f55CF0cF790D5c".toLowerCase();
 
 	$(".btn_admin").on('click', async function () {
 		if (typeof web3 !== 'undefined') {

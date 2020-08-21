@@ -202,8 +202,7 @@ const contractABI = [
 	}
 ]
 const contractAddress = "0x444de8c18Ddf9fa42799e3C4e4855A6be284BB16";
-// const admin = "0x4D071014619015986ad747f680f55CF0cF790D5c";
-var admin = "0x60A1c0D81347035CA2F12Cd5117EA5135fA2DEd8".toLowerCase();
+const admin = "0x4D071014619015986ad747f680f55CF0cF790D5c".toLowerCase();
 window.onload = async function () {
 	if (typeof web3 !== 'undefined') {
 		console.log('Metamask가 설치되어 있습니다.')
