@@ -73,18 +73,18 @@ contract token {
             return (0, 0, "0", "0", "0", "0", "0");
     }
 
-    // 인자 없으면 디폴트가 0인 지 확인
-    function update( uint256 studentID, string memory season, string memory name, string memory startDate, string memory endDate) public {
-        require(_isActive[studentID] != 0, "Not Registered");
-        if ( keccak256(abi.encode(season)) != keccak256(abi.encode("default")) )
-            _members[studentID].season = season;
-        if ( keccak256(abi.encode(name)) != keccak256(abi.encode("default")) )
-            _members[studentID].name = name;
-        if ( keccak256(abi.encode(startDate)) != keccak256(abi.encode("default")) )
-            _members[studentID].startDate = startDate;
-        if ( keccak256(abi.encode(endDate)) != keccak256(abi.encode("default")) )
-            _members[studentID].endDate = endDate;
-    }
+    // // 인자 없으면 디폴트가 0인 지 확인
+    // function update(uint256 studentID, string memory season, string memory name, string memory startDate, string memory endDate) public {
+    //     require(_isActive[studentID] != 0, "Not Registered");
+    //     if ( keccak256(abi.encode(season)) != keccak256(abi.encode("default")) )
+    //         _members[studentID].season = season;
+    //     if ( keccak256(abi.encode(name)) != keccak256(abi.encode("default")) )
+    //         _members[studentID].name = name;
+    //     if ( keccak256(abi.encode(startDate)) != keccak256(abi.encode("default")) )
+    //         _members[studentID].startDate = startDate;
+    //     if ( keccak256(abi.encode(endDate)) != keccak256(abi.encode("default")) )
+    //         _members[studentID].endDate = endDate;
+    // }
 
     function getCertificateCnt() public view returns (uint256) {
         return _certificateCnt;
