@@ -166,61 +166,48 @@ const contractABI = [
 		],
 		"stateMutability": "view",
 		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "studentID",
-				"type": "uint256"
-			},
-			{
-				"internalType": "string",
-				"name": "season",
-				"type": "string"
-			},
-			{
-				"internalType": "string",
-				"name": "name",
-				"type": "string"
-			},
-			{
-				"internalType": "string",
-				"name": "startDate",
-				"type": "string"
-			},
-			{
-				"internalType": "string",
-				"name": "endDate",
-				"type": "string"
-			}
-		],
-		"name": "update",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
 	}
 ]
-const contractAddress = "0x444de8c18Ddf9fa42799e3C4e4855A6be284BB16";
+const contractAddress = "0x3797E0746dd67bA64C0767e77186544D357f201c";
 
 let info;
 
+function checkNetworkId() {
+	if (typeof web3 !== 'undefined') {
+		return new Promise((resolve, reject) => {
+			web3.version.getNetwork(function(err, result) {
+				if (err) { reject(err); }
+				else { resolve(result); }
+			})
+		});
+	}
+	else { return -1; }
+}
+
+
 $('#btn-chkCert').on('click', async function(){
     if (typeof web3 !== 'undefined') {
-        console.log('Metamask가 설치되어 있습니다.')
         ethereum.enable();
-        const contract = web3.eth.contract(contractABI).at(contractAddress);
         const accounts = await ethereum.enable();
-        let account = accounts[0];
-        
-		let studentID = $("#input-studentId").val();
-		
-		contract.chkIssue.call(studentID, {
+		const account = accounts[0];
+		const contract = web3.eth.contract(contractABI).at(contractAddress);
+
+		let networkId = await checkNetworkId();
+		if (networkId == -1) {
+			alert('Metamask를 설치하세요.');
+			return;
+		}
+		else if (networkId != 3) {
+			alert('Ropsten Network를 사용하세요.');
+			return;
+		}
+		let studentId = $('#input-studentId').val();
+		contract.chkIssue.call(studentId, {
 			from: account
 		}, function(error, isIssued) {
 			if(error) {
-                console.log(error);
-                alert("Improper action");
+				alert("Something wrong calling smart contract method.");
+				return;
             } else {
 				let duration = 1200;
 				if (!isIssued) {
@@ -230,16 +217,16 @@ $('#btn-chkCert').on('click', async function(){
 					$('#outputChk').slideDown(duration);
 				}
 				else {
-					contract.showIssue.call(studentID, {
+					contract.showIssue.call(studentId, {
 						from: account
 					}, function(error, result) {
 						if (error) {
-							console.log(error);
-                			alert("Improper action");
+							alert("Something wrong calling smart contract method.");
+							return;
 						}
 						else {
 							$('#outputChk').text('다음 증명서를 발급 가능합니다.');
-							$('#studentId').text(studentID);
+							$('#studentId').text(studentId);
 							$('#memberName').text(result[3]);
 							$('#issueDate').text(result[6]);
 							$('#txHash').text(result[1]);
@@ -250,15 +237,15 @@ $('#btn-chkCert').on('click', async function(){
 							$('#outputResult').slideDown(duration);
 
 							info = result;
-							info.push(studentID);
+							info.push(studentId);
 						}
 					});
 				}
             }
 		});
 		
-    }else {
-        console.log('Metamask 설치하세요');
+    } else {
+        alert('Metamask를 설치하세요.');
     }
 });
 

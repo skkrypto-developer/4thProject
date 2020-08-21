@@ -166,42 +166,9 @@ const contractABI = [
 		],
 		"stateMutability": "view",
 		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "studentID",
-				"type": "uint256"
-			},
-			{
-				"internalType": "string",
-				"name": "season",
-				"type": "string"
-			},
-			{
-				"internalType": "string",
-				"name": "name",
-				"type": "string"
-			},
-			{
-				"internalType": "string",
-				"name": "startDate",
-				"type": "string"
-			},
-			{
-				"internalType": "string",
-				"name": "endDate",
-				"type": "string"
-			}
-		],
-		"name": "update",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
 	}
 ]
-const contractAddress = "0x444de8c18Ddf9fa42799e3C4e4855A6be284BB16";
+const contractAddress = "0x3797E0746dd67bA64C0767e77186544D357f201c";
 const admin = "0x4D071014619015986ad747f680f55CF0cF790D5c".toLowerCase();
 window.onload = async function () {
 	if (typeof web3 !== 'undefined') {
@@ -312,52 +279,52 @@ if (typeof web3 !== 'undefined') {
         });
 	});
 
-	$(".btn_showIssue").on('click', async function () {
-		const accounts = await ethereum.enable();
-        let account = accounts[0];
+	// $(".btn_showIssue").on('click', async function () {
+	// 	const accounts = await ethereum.enable();
+    //     let account = accounts[0];
         
-		let studentID = $("#showIssue_id").val();
+	// 	let studentID = $("#showIssue_id").val();
 		
-		contract.showIssue.call(studentID, {
-			from: account
-		}, function(error, result) {
-			if(error)
-				console.log(error);
-			else
-				console.log(result);
-        });
-	});
+	// 	contract.showIssue.call(studentID, {
+	// 		from: account
+	// 	}, function(error, result) {
+	// 		if(error)
+	// 			console.log(error);
+	// 		else
+	// 			console.log(result);
+    //     });
+	// });
 
-	$(".btn_update").on('click', async function () {
-		const accounts = await ethereum.enable();
-        let account = accounts[0];
+	// $(".btn_update").on('click', async function () {
+	// 	const accounts = await ethereum.enable();
+    //     let account = accounts[0];
 		
-		let season = $("#update_season").val();
-		if (season == "")
-			season = "default";
-		let studentID = $("#update_id").val();
-		if (studentID == "")
-			studentID = 0;
-		let name = nameFormat($("#update_name").val());
-		if (name == "")
-			name = "default";
-		let startDate = activeDateFormat($("#update_startDate").val());
-		if (startDate == "")
-			startDate = "default";
-		let endDate = activeDateFormat($("#update_endDate").val());
-		if (endDate == "")
-			endDate = "default";
+	// 	let season = $("#update_season").val();
+	// 	if (season == "")
+	// 		season = "default";
+	// 	let studentID = $("#update_id").val();
+	// 	if (studentID == "")
+	// 		studentID = 0;
+	// 	let name = nameFormat($("#update_name").val());
+	// 	if (name == "")
+	// 		name = "default";
+	// 	let startDate = activeDateFormat($("#update_startDate").val());
+	// 	if (startDate == "")
+	// 		startDate = "default";
+	// 	let endDate = activeDateFormat($("#update_endDate").val());
+	// 	if (endDate == "")
+	// 		endDate = "default";
 
-		contract.update.sendTransaction(studentID, season, name, startDate, endDate, {
-			from: account,
-			gas: 300000
-		}, function(error, result) {
-			if(error)
-				console.log(error);
-			else
-				console.log(result);
-        });
-    });
+	// 	contract.update.sendTransaction(studentID, season, name, startDate, endDate, {
+	// 		from: account,
+	// 		gas: 300000
+	// 	}, function(error, result) {
+	// 		if(error)
+	// 			console.log(error);
+	// 		else
+	// 			console.log(result);
+    //     });
+    // });
     
 } else {
     console.log('Metamask 설치하세요');
