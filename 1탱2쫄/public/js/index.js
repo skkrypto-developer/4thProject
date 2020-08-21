@@ -1,4 +1,5 @@
-const admin = "0x4D071014619015986ad747f680f55CF0cF790D5c";
+// const admin = "0x4D071014619015986ad747f680f55CF0cF790D5c";
+const admin = "0x60A1c0D81347035CA2F12Cd5117EA5135fA2DEd8".toLowerCase();
 
 
 	$(".btn_admin").on('click', async function () {
@@ -6,10 +7,9 @@ const admin = "0x4D071014619015986ad747f680f55CF0cF790D5c";
 			console.log('Metamask가 설치되어 있습니다.')
 			ethereum.enable();
 			const accounts = await ethereum.enable();
-			let account = accounts[0];
-			console.log(account);
-			console.log(admin);
-			if (account.toLowerCase() == admin.toLowerCase()) {
+			let account = accounts[0].toLowerCase();
+			console.log(account.localeCompare(admin));
+			if (account.localeCompare(admin) == 0) {
 				window.open("./admin");
 			} else {
 				alert("NO");

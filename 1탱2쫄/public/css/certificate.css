@@ -36,29 +36,78 @@
   }
 
   .certify{
-    position: relative;
-    height: 200px;
-    background-color: #a98cc1;
-    vertical-align: middle;
+    display: grid;
+    width: 100%;
+    height: 600px;
+    padding-top:25px;
+    padding-bottom: 25px;
+    padding-left: 3%;
+    padding-right: 3%;
+    background-color: #e8eff5;
+    grid-template-columns: repeat(2, 0.9fr);
+    grid-column-gap: 25px;
+    align-items: center;
   }
 
-  #txtcert{
-    display:block;
-    position: relative;
-    
-  
+  #sampleImg {
+    width: 100%;
+    height: 550px;
+    border: solid;
   }
-  #btncert{
-    display:block;
-    margin-top: 15px;
+
+  #certInput {
+    display: inline-block;
+    padding-left: 7%;
+    padding-right: 7%;
+    grid-template-columns: 2fr 1fr;
+  }
+
+  #input-studentId{
+    position: relative;
+    left: 225px;
+  }
+
+  #btn-chkCert{
+    position: relative;
+    left: 250px;
     text-align: center;
-    position: relative;
+    background-color: purple;
   }
-  #space{
-    position: relative;
+
+  #certOutput {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 15px;
+  }
+
+  .chk-txt {
     display: block;
-    height: 20px;
+    font-size: large;
+    font-weight: 1000;
   }
-  #btncert1{
+
+  .info-txt {
+    display: inline-block;
+    width: 100px;
+  }
+
+  .info-txt::before {
+    content: "";
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    border-radius: 10px;
+    background-color: #c6c8d1;
+    margin-right: 8px;
+    transform: translateY(-4px);
+  }
+  
+  .result-txt {
+  }
+
+  #btn-getCert {
+    position: relative;
+    left: 250px;
+    text-align: center;
     background-color: purple;
   }

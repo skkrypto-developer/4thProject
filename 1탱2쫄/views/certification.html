@@ -7,19 +7,29 @@
     <link rel="stylesheet" type="text/css" href="/css/certificationPage.css" />
     <link href="//db.onlinewebfonts.com/c/82ac464059468e8dacb3d4d3f5c81253?family=Footlight+MT+Light" rel="stylesheet" type="text/css"/>
     <link href="//db.onlinewebfonts.com/c/f23dd533e7ead1edf77c514e74fdc55c?family=OCRB" rel="stylesheet" type="text/css"/>
+
+
+
+    <!-- Stylesheets -->
+	<link rel="stylesheet" href="/css/style.css"/>
+    
+
+
+
+
     <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"></script>
     <script>
         window.onload = function () {
+            let startDate = sessionStorage.getItem('startDate').split('.');
+            let endDate = sessionStorage.getItem('endDate').split('.');
+
             $('#season').text(sessionStorage.getItem('season')+'th');
             $('#schoolId').text(sessionStorage.getItem('schoolId'));
             $('#name').text(sessionStorage.getItem('name'));
-            var startDate = sessionStorage.getItem('startDate').split('.');
-            var endDate = sessionStorage.getItem('endDate').split('.');
-            $('#period').text(startDate[0] + '.' + startDate[1] +'~'
-                              + endDate[0]+'.'+endDate[1]);
+            $('#period').text(startDate[0] + '.' + startDate[1] +'~' + endDate[0]+'.'+endDate[1]);
             $('#date').text(sessionStorage.getItem('certifyDate'));
             $('#hash').text(sessionStorage.getItem('hash'));
         }
@@ -28,21 +38,17 @@
     </script>
 
 </head>
-<body style='background-color: #200545;'>
+<body>
     <div class="certifyContainer">
-        <div style="width:1000px;float:left;"><img src='/img/certification.png'>
-        </div>
+        <img src='/img/certification.png'>
         <div id='season'></div>
         <div id='schoolId'></div>
         <div id='name'></div>
         <div id='period'></div>
         <div id='date'></div>
         <div id='hash'></div>
-
     </div>
-    <div id='download'>
-        <input type='button' id="btnCertify" value='증명서 다운' >
-    </div>
+    <button id="download" class="site-btn">증명서 다운로드</button>
     <a id="target" style="display: none"></a>
 
     <script src="/js/certificate.js"></script>

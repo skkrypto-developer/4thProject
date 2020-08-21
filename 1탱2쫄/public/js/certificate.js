@@ -1,5 +1,42 @@
 const contractABI = [
 	{
+		"inputs": [],
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "studentID",
+				"type": "uint256"
+			}
+		],
+		"name": "chkIssue",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "getCertificateCnt",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
 		"inputs": [
 			{
 				"internalType": "uint256",
@@ -64,9 +101,71 @@ const contractABI = [
 		"type": "function"
 	},
 	{
-		"inputs": [],
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "studentID",
+				"type": "uint256"
+			},
+			{
+				"internalType": "bytes32",
+				"name": "hash",
+				"type": "bytes32"
+			}
+		],
+		"name": "setIssueTxHash",
+		"outputs": [],
 		"stateMutability": "nonpayable",
-		"type": "constructor"
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "studentID",
+				"type": "uint256"
+			}
+		],
+		"name": "showIssue",
+		"outputs": [
+			{
+				"internalType": "bytes32",
+				"name": "",
+				"type": "bytes32"
+			},
+			{
+				"internalType": "bytes32",
+				"name": "",
+				"type": "bytes32"
+			},
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
 	},
 	{
 		"inputs": [
@@ -100,73 +199,13 @@ const contractABI = [
 		"outputs": [],
 		"stateMutability": "nonpayable",
 		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "getCertificateCnt",
-		"outputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "studentID",
-				"type": "uint256"
-			}
-		],
-		"name": "showIssue",
-		"outputs": [
-			{
-				"internalType": "bytes32",
-				"name": "",
-				"type": "bytes32"
-			},
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			},
-			{
-				"internalType": "string",
-				"name": "",
-				"type": "string"
-			},
-			{
-				"internalType": "string",
-				"name": "",
-				"type": "string"
-			},
-			{
-				"internalType": "string",
-				"name": "",
-				"type": "string"
-			},
-			{
-				"internalType": "string",
-				"name": "",
-				"type": "string"
-			},
-			{
-				"internalType": "string",
-				"name": "",
-				"type": "string"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
 	}
 ]
-const contractAddress = "0xDC5724C1D0573fFDCD89F2B980AF7cA71588b418";
+const contractAddress = "0x444de8c18Ddf9fa42799e3C4e4855A6be284BB16";
 
-$('#btncert1').on('click',async function(){
+let info;
+
+$('#btn-chkCert').on('click', async function(){
     if (typeof web3 !== 'undefined') {
         console.log('Metamask가 설치되어 있습니다.')
         ethereum.enable();
@@ -174,46 +213,74 @@ $('#btncert1').on('click',async function(){
         const accounts = await ethereum.enable();
         let account = accounts[0];
         
-		let studentID = $("#cert_schoolId").val();
+		let studentID = $("#input-studentId").val();
 		
-		contract.showIssue.call(studentID, {
+		contract.chkIssue.call(studentID, {
 			from: account
-		}, function(error, result) {
-			if(error){
+		}, function(error, isIssued) {
+			if(error) {
                 console.log(error);
                 alert("Improper action");
-            }else{
-                
-                sessionStorage.setItem('hash',result[0]);
-                sessionStorage.setItem('schoolId',result[1].c[0]);
-                sessionStorage.setItem('season',result[2]);
-                sessionStorage.setItem('name',result[3]);
-                sessionStorage.setItem('startDate',result[4]);
-                sessionStorage.setItem('endDate',result[5]);
-                sessionStorage.setItem('certifyDate',result[6]);
+            } else {
+				let duration = 1200;
+				if (!isIssued) {
+					$('#outputResult').slideUp(duration);
 
+					$('#outputChk').text('발급 가능한 증명서가 없습니다.');
+					$('#outputChk').slideDown(duration);
+				}
+				else {
+					contract.showIssue.call(studentID, {
+						from: account
+					}, function(error, result) {
+						if (error) {
+							console.log(error);
+                			alert("Improper action");
+						}
+						else {
+							$('#outputChk').text('다음 증명서를 발급 가능합니다.');
+							$('#studentId').text(studentID);
+							$('#memberName').text(result[3]);
+							$('#issueDate').text(result[6]);
+							$('#txHash').text(result[1]);
+							$('#txHash').attr('href', 'https://ropsten.etherscan.io/tx/' + result[1]);
+							$('#txHash').attr('target', '_blank');
+							
+							$('#outputChk').slideDown(duration);
+							$('#outputResult').slideDown(duration);
 
-                
-                window.open("/certification","_blank","width=1316px, height=733px,menubar=no, status=no, toolbar=no");
+							info = result;
+							info.push(studentID);
+						}
+					});
+				}
             }
-        });
-
-
-       
-   
+		});
+		
     }else {
         console.log('Metamask 설치하세요');
     }
-   
-})
+});
 
-$("#btnCertify").on('click', function(e) {
-    
-    html2canvas($('.certifyContainer').get(0)).then(function(canvas) {
-        var el = document.getElementById("target");
-        el.href = canvas.toDataURL("image/jpeg");
-        el.download = 'certification.jpg';
-        el.click();
-        });
-    });
+$('#btn-getCert').on('click', function() {
+	if (info != null) {
+		sessionStorage.setItem('hash', info[1]);
+		sessionStorage.setItem('season', info[2]);
+		sessionStorage.setItem('name', info[3]);
+		sessionStorage.setItem('startDate', info[4]);
+		sessionStorage.setItem('endDate', info[5]);
+		sessionStorage.setItem('certifyDate', info[6]);
+		sessionStorage.setItem('schoolId', info[7]);
 
+		window.open("/certification", "_blank", "width=1015px, height=720px, menubar=no, status=no, toolbar=no");
+	}
+});
+
+$("#download").on('click', function(e) {
+	html2canvas($('.certifyContainer').get(0)).then(function(canvas) {
+		let el = document.getElementById("target");
+		el.href = canvas.toDataURL("image/jpeg");
+		el.download = 'certification.jpg';
+		el.click();
+	});
+});

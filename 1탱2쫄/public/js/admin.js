@@ -1,5 +1,42 @@
 const contractABI = [
 	{
+		"inputs": [],
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "studentID",
+				"type": "uint256"
+			}
+		],
+		"name": "chkIssue",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "getCertificateCnt",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
 		"inputs": [
 			{
 				"internalType": "uint256",
@@ -64,9 +101,71 @@ const contractABI = [
 		"type": "function"
 	},
 	{
-		"inputs": [],
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "studentID",
+				"type": "uint256"
+			},
+			{
+				"internalType": "bytes32",
+				"name": "hash",
+				"type": "bytes32"
+			}
+		],
+		"name": "setIssueTxHash",
+		"outputs": [],
 		"stateMutability": "nonpayable",
-		"type": "constructor"
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "studentID",
+				"type": "uint256"
+			}
+		],
+		"name": "showIssue",
+		"outputs": [
+			{
+				"internalType": "bytes32",
+				"name": "",
+				"type": "bytes32"
+			},
+			{
+				"internalType": "bytes32",
+				"name": "",
+				"type": "bytes32"
+			},
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
 	},
 	{
 		"inputs": [
@@ -100,85 +199,23 @@ const contractABI = [
 		"outputs": [],
 		"stateMutability": "nonpayable",
 		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "getCertificateCnt",
-		"outputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "studentID",
-				"type": "uint256"
-			}
-		],
-		"name": "showIssue",
-		"outputs": [
-			{
-				"internalType": "bytes32",
-				"name": "",
-				"type": "bytes32"
-			},
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			},
-			{
-				"internalType": "string",
-				"name": "",
-				"type": "string"
-			},
-			{
-				"internalType": "string",
-				"name": "",
-				"type": "string"
-			},
-			{
-				"internalType": "string",
-				"name": "",
-				"type": "string"
-			},
-			{
-				"internalType": "string",
-				"name": "",
-				"type": "string"
-			},
-			{
-				"internalType": "string",
-				"name": "",
-				"type": "string"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
 	}
 ]
-const contractAddress = "0xDC5724C1D0573fFDCD89F2B980AF7cA71588b418";
-var admin = 0x4D071014619015986ad747f680f55CF0cF790D5c;
+const contractAddress = "0x444de8c18Ddf9fa42799e3C4e4855A6be284BB16";
+// const admin = "0x4D071014619015986ad747f680f55CF0cF790D5c";
+var admin = "0x60A1c0D81347035CA2F12Cd5117EA5135fA2DEd8".toLowerCase();
 window.onload = async function () {
 	if (typeof web3 !== 'undefined') {
 		console.log('Metamask가 설치되어 있습니다.')
 		const accounts = await ethereum.enable();
-        let account = accounts[0];
+        let account = accounts[0].toLowerCase();
 		if(account != admin){
 			alert('no');
 			window.close();
 		}
- 	}else {
+ 	} else {
 		window.close();
     }
-   
 }
 
 let nameFormat = function(name) {
@@ -259,11 +296,20 @@ if (typeof web3 !== 'undefined') {
 		contract.issue.sendTransaction(studentID, issueDate, {
 			from: account,
 			gas: 300000
-		}, function(error, result) {
+		}, function(error, hash) {
 			if(error)
 				console.log(error);
-			else
-				console.log(result);
+			else {
+				contract.setIssueTxHash.sendTransaction(studentID, hash, {
+					from: account,
+					gas: 300000
+				}, function(error, result) {
+					if(error)
+						console.log(error);
+					else
+						console.log(result);
+				});
+			}
         });
 	});
 

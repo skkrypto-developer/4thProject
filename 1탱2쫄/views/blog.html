@@ -69,7 +69,7 @@
 	<!-- Page Top section -->
 	<section class="page-top-section set-bg" data-setbg="/img/page-top-bg.jpg">
 		<div class="container" id="certify">
-			<h2>학회 활동 증명서 조회</h2>
+			<h2>Issue certificate</h2>
 			<div class="site-breadcrumb">
 				<span>학회 활동 증명서 조회</span>
 			</div>
@@ -80,9 +80,44 @@
 
 	<!--증명서 조회-->
 	<div class="certify">
-		<div id="space"></div>
-		<div id="txtcert"><input type='text' id='cert_schoolId' placeholder='본인의 학번을 입력해주세요.' ></div>
-		<div id="btncert"><button class="site-btn" id="btncert1">증명서 조회</button></div>
+		<div id="sample">
+			<img id="sampleImg" src="img/certification.png">
+		</div>
+		<div id="certInfo">
+			<div id="certInput">
+				<input id="input-studentId" type='text' placeholder='본인의 학번을 입력해주세요.'>
+				<button id="btn-chkCert" class="site-btn">증명서 조회</button>
+			</div><br>
+			<div id="certOutput">
+				<div id="outputChk" class="chk-txt" style="display: none;"></div>
+				<div id="outputResult" style="display: none;">
+					<hr>
+					<p id="p-certId">
+						<span class="info-txt">발급기관</span>
+						<span id="issuer" class="result-txt">SKKRYPTO</span>
+					</p>
+					<p id="p-studentId">
+						<span class="info-txt">학번</span>
+						<span id="studentId" class="result-txt"></span>
+					</p>
+					<p id="p-memberName">
+						<span class="info-txt">수령인</span>
+						<span id="memberName" class="result-txt"></span>
+					</p>
+					<p id="p-issueDate">
+						<span class="info-txt">발급일자</span>
+						<span id="issueDate" class="result-txt"></span>
+					</p>
+					<hr>
+					<p id="p-txHash">
+						<span class="chk-txt">증서 위변조 여부 확인</span>
+						<a id="txHash" class="result-txt"></a>
+					</p>
+					<button id="btn-getCert" class="site-btn">증명서 확인</button>
+				</div>
+
+			</div>
+		</div>
 	</div>
 
 

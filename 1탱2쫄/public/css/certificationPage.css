@@ -74,20 +74,6 @@
     text-shadow: 1px 1px 1px gray;
     position: absolute;
 }
-#btnCertify{
-	border: none;
-	font-size: 18px;
-	font-weight: 400;
-	min-width: 180px;
-	padding: 20px;
-	border-radius: 14px;
-	background: #eb2b63;
-	color: #fff;
-    margin-top: 300px;
-	cursor: pointer;
-    text-align: center;
-    
-}
 #hash{
     left: 430px;
     width: 500px; 
@@ -100,19 +86,22 @@
     position: absolute;
     text-decoration: underline;
 }
-
 .certifyContainer{
     width:1000px;
     height:716px;
     float: left;
-
 }
-#download{
-    float:left;
-    margin-left:50px;
+#download {
+    position: absolute;
+    left: 800px;
+    background-color: purple;
+    border: none;
+    margin-top: 10px;
+	padding: 20px;
+    border-radius: 15px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
     text-align: center;
-    
-    height:733px;
-    width:200px;
-
 }
